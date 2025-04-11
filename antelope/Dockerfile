@@ -1,4 +1,4 @@
-FROM ghcr.io/vexxhost/ubuntu-cloud-archive:antelope@sha256:0f4c144692dda2d4d3b43bee990e3d24f9af7c91e8c9bbc4022008dc4d8f4c14
+FROM ghcr.io/vexxhost/ubuntu-cloud-archive:antelope@sha256:f80a2c63991371da5af26b5af8adf5551301440e9fb099c799f065808927d20d
 ENV PATH=/var/lib/openstack/bin:$PATH
 RUN \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \

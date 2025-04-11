@@ -1,4 +1,4 @@
-FROM ghcr.io/vexxhost/ubuntu-cloud-archive:caracal@sha256:464740a80e8d800f5abd4ada71e299477437d424a27dc2f1a6a04116ec5ce3be
+FROM ghcr.io/vexxhost/ubuntu-cloud-archive:caracal@sha256:db9685418828d105046d2b55d012627891340b09042ad85e56c049706ab84303
 ENV PATH=/var/lib/openstack/bin:$PATH
 RUN \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
