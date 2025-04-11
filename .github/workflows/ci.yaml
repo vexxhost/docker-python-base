@@ -31,4 +31,4 @@ jobs:
         type=sha,suffix=-${{ matrix.release }}
         type=raw,value=${{ matrix.release }}
         type=raw,value=${{ matrix.release }}-{{date 'X'}}
-      push: ${{ github.event_name == 'push' }}
+      push: ${{ github.ref == 'refs/heads/main' }}
