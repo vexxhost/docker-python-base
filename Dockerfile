@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM ghcr.io/vexxhost/ubuntu-cloud-archive:zed@sha256:9aafd7d01b0f3589205092052e476e70290f4847e2efeb1b3c07a4e8c315f0ad
+FROM ghcr.io/vexxhost/ubuntu-cloud-archive:zed@sha256:09969a5f11572b04648137509791c8e6d7f5093e7140dd92beab1f177382a004
 ENV PATH=/var/lib/openstack/bin:$PATH
 RUN \
     apt-get update -qq && \
