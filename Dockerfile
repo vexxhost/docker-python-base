@@ -10,9 +10,6 @@ RUN uvx bindep -b -f /bindep.txt -l newline > /packages.txt
 
 FROM ${FROM}
 ENV PATH=/var/lib/openstack/bin:$PATH
+COPY install-packages /usr/local/bin/install-packages
 COPY --from=bindep /packages.txt /packages.txt
-RUN \
-    apt-get update -qq && \
-    apt-get install -qq -y --no-install-recommends $(cat /packages.txt) && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN install-packages $(cat /packages.txt)
