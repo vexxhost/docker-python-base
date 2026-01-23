@@ -1,8 +1,9 @@
 ca-certificates
-libpython3.12 [platform:dpkg !platform:debian-trixie]
-libpython3.13 [platform:dpkg]
+libpcre2-8-0 [platform:debian]
+libpcre3 [platform:ubuntu]
+libpython3.10 [platform:ubuntu-jammy]
+libpython3.12 [platform:ubuntu-noble]
+libpython3.13 [platform:debian-trixie platform:debian-sid]
 lsb-release
-libpcre3 [platform:dpkg !platform:debian-trixie]
-libpcre2-8-0 [platform:dpkg]
 python3-setuptools
 sudo
