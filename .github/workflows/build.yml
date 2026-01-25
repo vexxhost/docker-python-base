@@ -11,6 +11,14 @@ on:
 jobs:
   image:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image-name: python-base
+            from: ghcr.io/vexxhost/ubuntu-cloud-archive:main@sha256:de1f31c2017c1928ec9c8f5f22c00cc4779a4f303b1ca647072fcd12b5184d90
+          - image-name: debian-python-base
+            from: debian:trixie
     permissions:
       contents: read
       id-token: write
@@ -19,11 +27,6 @@ jobs:
     steps:
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
-          image-name: python-base
-          build-args: FROM=ghcr.io/vexxhost/ubuntu-cloud-archive:main@sha256:de1f31c2017c1928ec9c8f5f22c00cc4779a4f303b1ca647072fcd12b5184d90
-          push: ${{ github.event_name != 'pull_request' }}
-      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
-        with:
-          image-name: debian-python-base
-          build-args: FROM=debian:trixie
+          image-name: ${{ matrix.image-name }}
+          build-args: FROM=${{ matrix.from }}
           push: ${{ github.event_name != 'pull_request' }}
