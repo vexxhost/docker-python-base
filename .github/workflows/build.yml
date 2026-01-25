@@ -17,19 +17,22 @@ jobs:
       matrix:
         include:
           - name: ubuntu
-            image-name: ubuntu-python-base
+            image-name: python-base-ubuntu
             from: ubuntu:24.04
           - name: ubuntu-cloud-archive
+            image-name: python-base-ubuntu-cloud-archive
+            from: ghcr.io/vexxhost/ubuntu-cloud-archive:main@sha256:de1f31c2017c1928ec9c8f5f22c00cc4779a4f303b1ca647072fcd12b5184d90
+          - name: ubuntu-cloud-archive-legacy
             image-name: python-base
             from: ghcr.io/vexxhost/ubuntu-cloud-archive:main@sha256:de1f31c2017c1928ec9c8f5f22c00cc4779a4f303b1ca647072fcd12b5184d90
           - name: debian
-            image-name: debian-python-base
+            image-name: python-base-debian
             from: debian:trixie
           - name: rockylinux
-            image-name: rockylinux-python-base
+            image-name: python-base-rockylinux
             from: rockylinux:9
           - name: almalinux
-            image-name: almalinux-python-base
+            image-name: python-base-almalinux
             from: almalinux:9
     permissions:
       contents: read
