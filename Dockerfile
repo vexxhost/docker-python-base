@@ -5,7 +5,8 @@ ARG FROM=ghcr.io/vexxhost/ubuntu-cloud-archive:main@sha256:de1f31c2017c1928ec9c8
 
 FROM ${FROM} AS bindep
 COPY bindep.txt /bindep.txt
-RUN --mount=type=bind,from=ghcr.io/astral-sh/uv:latest,source=/uvx,target=/uvx \
+RUN --mount=type=bind,from=ghcr.io/astral-sh/uv:latest,source=/uv,target=/uv \
+    --mount=type=bind,from=ghcr.io/astral-sh/uv:latest,source=/uvx,target=/uvx \
     /uvx bindep -b -f /bindep.txt -l newline > /packages.txt
 
 FROM ${FROM}
