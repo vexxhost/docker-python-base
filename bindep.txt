@@ -3,6 +3,5 @@ libpython3.10 [platform:ubuntu]
 libpython3.9 [platform:debian]
 python3-libs [platform:redhat]
 lsb-release [platform:dpkg]
-python3-distutils [platform:ubuntu]
-python3-setuptools [platform:debian platform:redhat]
+python3-distutils [platform:dpkg]
 sudo
