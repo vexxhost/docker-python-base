@@ -18,7 +18,7 @@ jobs:
         include:
           - name: ubuntu
             image-name: python-base-ubuntu
-            from: ubuntu:24.04
+            from: ubuntu:22.04
           - name: ubuntu-cloud-archive
             image-name: python-base-ubuntu-cloud-archive
             from: ghcr.io/vexxhost/ubuntu-cloud-archive:2023.1@sha256:cee673994251c6538ad920a66141576e1e7b1252e17a7db17e422a01728278a0
@@ -27,7 +27,7 @@ jobs:
             from: ghcr.io/vexxhost/ubuntu-cloud-archive:2023.1@sha256:cee673994251c6538ad920a66141576e1e7b1252e17a7db17e422a01728278a0
           - name: debian
             image-name: python-base-debian
-            from: debian:trixie
+            from: debian:bullseye
           - name: rockylinux
             image-name: python-base-rockylinux
             from: rockylinux:9
