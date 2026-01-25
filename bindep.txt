@@ -3,6 +3,9 @@ libpcre2-8-0 [platform:debian]
 libpcre3 [platform:ubuntu]
 libpython3.12 [platform:ubuntu]
 libpython3.13 [platform:debian]
-lsb-release
+pcre2 [platform:redhat]
+python3-libs [platform:redhat]
+lsb-release [platform:dpkg]
+redhat-lsb-core [platform:redhat]
 python3-setuptools
 sudo
