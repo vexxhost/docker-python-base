@@ -6,6 +6,5 @@ libpython3.13 [platform:debian]
 pcre2 [platform:redhat]
 python3-libs [platform:redhat]
 lsb-release [platform:dpkg]
-redhat-lsb-core [platform:redhat]
 python3-setuptools
 sudo
