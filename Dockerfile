@@ -11,5 +11,5 @@ RUN uvx bindep -b -f /bindep.txt -l newline > /packages.txt
 FROM ${FROM}
 ENV PATH=/var/lib/openstack/bin:$PATH
 COPY install-packages /usr/local/bin/install-packages
-COPY --from=bindep /packages.txt /packages.txt
-RUN install-packages $(cat /packages.txt)
+RUN --mount=type=bind,from=bindep,source=/packages.txt,target=/packages.txt \
+    install-packages $(cat /packages.txt)
