@@ -10,7 +10,30 @@ on:
 
 jobs:
   image:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: ubuntu
+            image-name: python-base-ubuntu
+            from: ubuntu:24.04
+          - name: ubuntu-cloud-archive
+            image-name: python-base-ubuntu-cloud-archive
+            from: ghcr.io/vexxhost/ubuntu-cloud-archive:2025.2@sha256:ac32af5dba570900ca94e6fde00007a496a801334bb2a0f2663d886910bc62a9
+          - name: ubuntu-cloud-archive-legacy
+            image-name: python-base
+            from: ghcr.io/vexxhost/ubuntu-cloud-archive:2025.2@sha256:ac32af5dba570900ca94e6fde00007a496a801334bb2a0f2663d886910bc62a9
+          - name: debian
+            image-name: python-base-debian
+            from: debian:trixie
+          - name: rockylinux
+            image-name: python-base-rockylinux
+            from: rockylinux:9
+          - name: almalinux
+            image-name: python-base-almalinux
+            from: almalinux:9
     permissions:
       contents: read
       id-token: write
@@ -19,5 +42,6 @@ jobs:
     steps:
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
-          image-name: python-base
+          image-name: ${{ matrix.image-name }}
+          build-args: FROM=${{ matrix.from }}
           push: ${{ github.event_name != 'pull_request' }}
