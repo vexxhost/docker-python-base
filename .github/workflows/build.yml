@@ -27,7 +27,7 @@ jobs:
             from: ghcr.io/vexxhost/ubuntu-cloud-archive:2025.1@sha256:8908e9e220767bc5f62c79a92a0675986f9df4cda809fefa1401d812f708ac14
           - name: debian
             image-name: python-base-debian
-            from: debian:trixie@sha256:5cf544fad978371b3df255b61e209b373583cb88b733475c86e49faa15ac2104
+            from: debian:trixie@sha256:8a4206e9cccfb5dcacb363063c66c39e8ab4aa4b9f601f0ef76a9cca6791bb23
           - name: rockylinux
             image-name: python-base-rockylinux
             from: rockylinux:9@sha256:d7be1c094cc5845ee815d4632fe377514ee6ebcf8efaed6892889657e5ddaaa6
