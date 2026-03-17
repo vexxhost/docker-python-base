@@ -18,7 +18,7 @@ jobs:
         include:
           - name: ubuntu
             image-name: python-base-ubuntu
-            from: ubuntu:22.04@sha256:3ba65aa20f86a0fad9df2b2c259c613df006b2e6d0bfcc8a146afb8c525a9751
+            from: ubuntu:22.04@sha256:7e384625e83f5fb187731631a49c3580a62707ae94767c7fcb0222d252fc1074
           - name: ubuntu-cloud-archive
             image-name: python-base-ubuntu-cloud-archive
             from: ghcr.io/vexxhost/ubuntu-cloud-archive:2024.1@sha256:e43c6d397c99cf546951b33460575d95544c0719a3d0a2a2f0b76145b66d906c
