@@ -6,5 +6,5 @@ ARG FROM
 FROM ${FROM}
 ENV PATH=/var/lib/openstack/bin:$PATH
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
-    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:e9473fc5185c82745d83facbc8c869c7797bd5e2ac9ca72f8c930fc0448e2b43,source=/bin,target=/build \
+    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:b7cd2d8781e532a3c159eb835a41c50933f8c9faa14dcf1aac320f33481ce4b2,source=/bin,target=/build \
     /build/install-bindep-packages
