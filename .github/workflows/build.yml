@@ -36,7 +36,7 @@ jobs:
             from: rockylinux/rockylinux:10@sha256:f4da504c18e7aced902f4f728cde787cd9d9b817bc639fe171026d18364dca6c
           - name: almalinux
             image-name: python-base-almalinux
-            from: almalinux:10@sha256:5e1f19a1fc018dcb17f042411bff68c64cb06131ff1a71356d0be011f87c7baa
+            from: almalinux:10@sha256:27aacfd1f18ed87177517370951fc27ee4afd5b74d8ba34ccf8290f3559e5b31
     permissions:
       contents: read
       id-token: write
