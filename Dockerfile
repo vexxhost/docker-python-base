@@ -18,5 +18,5 @@ if [ "$ID" = debian ] && [ "${VERSION_CODENAME:-}" = bullseye ]; then
 fi
 EOF
 RUN --mount=type=bind,source=bindep.txt,target=/bindep.txt \
-    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:077f7ec16c55f6a09fc3fbd0f57e45f0cce48dbe4d2c234d7b7269d927f880d6,source=/bin,target=/build \
+    --mount=type=bind,from=ghcr.io/vexxhost/build-utils:latest@sha256:e57edad3eec03ea4186f5cdd1dd9ced87fe13f6dff14d387d19dc2961b802ece,source=/bin,target=/build \
     /build/install-bindep-packages
