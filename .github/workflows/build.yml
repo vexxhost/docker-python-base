@@ -24,10 +24,10 @@ jobs:
             from: ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
           - name: ubuntu-cloud-archive
             image-name: python-base-ubuntu-cloud-archive
-            from: ghcr.io/vexxhost/ubuntu-cloud-archive:2026.1@sha256:512e2689484da46d3258d5191731f62e4228ff1ab47a8051cbc5fc22cf85e79f
+            from: ghcr.io/vexxhost/ubuntu-cloud-archive:2026.1@sha256:b19463ad933b6c22d3fbe6bf51dde9e03d33691331021a87ddb2f56fa11bc761
           - name: ubuntu-cloud-archive-legacy
             image-name: python-base
-            from: ghcr.io/vexxhost/ubuntu-cloud-archive:2026.1@sha256:512e2689484da46d3258d5191731f62e4228ff1ab47a8051cbc5fc22cf85e79f
+            from: ghcr.io/vexxhost/ubuntu-cloud-archive:2026.1@sha256:b19463ad933b6c22d3fbe6bf51dde9e03d33691331021a87ddb2f56fa11bc761
           - name: debian
             image-name: python-base-debian
             from: debian:trixie@sha256:4c25275446ca371766b8b093c696782eabce06263fccacb8d5d813b3dc44b308
