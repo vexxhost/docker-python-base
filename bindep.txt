@@ -1,7 +1,6 @@
 ca-certificates
-libpcre2-8-0 [platform:debian]
-libpcre3 [platform:ubuntu]
-libpython3.12 [platform:ubuntu]
+libpcre2-8-0 [platform:dpkg]
+libpython3.14 [platform:ubuntu]
 libpython3.13 [platform:debian]
 pcre2 [platform:redhat]
 python3-libs [platform:redhat]
