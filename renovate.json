@@ -1,4 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>vexxhost/docker-atmosphere"]
+  "extends": ["local>vexxhost/docker-atmosphere"],
+  "packageRules": [
+    {
+      "description": "Keep each branch on its OS major release. A major OS upgrade changes the system Python a release was built for, and these legacy base images are being phased out; digest updates within the same release still apply.",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["ubuntu", "debian", "rockylinux", "rockylinux/rockylinux", "almalinux"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
 }
